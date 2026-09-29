@@ -1,0 +1,19 @@
+# Bind the local teaching deployment to this computer only.
+services:
+  clickhouse:
+    ports: !override []
+  langfuse-web:
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+    ports: !override
+      - "127.0.0.1:3000:3000"
+  langfuse-worker:
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/postgres
+  minio:
+    ports: !override
+      - "127.0.0.1:9090:9000"
+      - "127.0.0.1:9191:9001"
+  postgres:
+    ports: !override
+      - "127.0.0.1:5433:5432"
