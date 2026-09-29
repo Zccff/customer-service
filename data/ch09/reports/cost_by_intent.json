@@ -1,0 +1,30 @@
+{
+ "meta": {
+  "days": 7,
+  "source": "Langfuse",
+  "generated_at": "2026-09-14 15:22",
+  "window_from": "2026-09-07T07:22:47Z",
+  "window_to": "2026-09-14T07:22:47Z"
+ },
+ "rows": [
+  {
+   "intent": "商品咨询",
+   "tokens": 39057,
+   "count": 7,
+   "avg_tokens": 5579,
+   "share": 0.7959
+  },
+  {
+   "intent": "其他",
+   "tokens": 10013,
+   "count": 2,
+   "avg_tokens": 5006,
+   "share": 0.2041
+  }
+ ],
+ "total_tokens": 49070,
+ "total_requests": 9,
+ "read_notes": {
+  "cost_by_intent": "商品咨询占了总 token 的 79.59% 且单均高达 5,579,说明它背后有多步调用,所以先给商品咨询瘦 prompt 或换小模型。"
+ }
+}
